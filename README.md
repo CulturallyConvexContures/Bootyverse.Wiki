@@ -93,10 +93,10 @@ This wiki covers:
 - Core **mechanic overviews**, **timers**, and **synergies**
 - Flavorful **quotes and guild lore**
 
-Later-game content, planets, and modules (like the **BootyCade™**, **BootyBank™,** or **Spectral Systems**) are briefly mentioned but not yet covered in full. Think of this as **Volume 1**: The Manual They Didn't Want You to Read.
+>Later-game content, planets, and modules (like the **BootyCade™**, **BootyBank™,** or **Spectral Systems**) are briefly mentioned but not yet covered in full. Think of this as **Volume 1**: The Manual They Didn't Want You to Read.
 ---
 
-*> 🍑*This document has been reviewed and notarized by The Buttress.**  
-*> Keeper of Coherence, Protector of Creative Integrity™*  
+> 🍑*This document has been reviewed and notarized by The Buttress.**  
+> Keeper of Coherence, Protector of Creative Integrity™*  
 > *_Tamper not with that which thiccness has signed._*
 ---
