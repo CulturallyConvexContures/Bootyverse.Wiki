@@ -1,8 +1,8 @@
 # 🍑 Bootyverse.Wiki™
 
-> “You found it, babe. The thicc manual they didn’t want you to read.  
-> From Bedrock Baddies to Sultry Anglers Syndicate, it’s all in here, color-coded and cheek-scribed.”  
-> - **Mango Moxie**💋, Art Dojo Instructor, Curator of Curves™
+> “You found it, babe. The color-coded, cheek-scribed thicc manual they didn’t want you to read."
+
+> -**Mango Moxie**💋, Art Dojo Instructor, Curator of Curves™
 
 Welcome to the Bootyverse.Wiki™ a cheek-coded archive of **early-game systems, starter modules, and mythic mechanics**.  
 Here, you’ll find **deep dives into the first few weeks of gameplay**, covering:
