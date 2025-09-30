@@ -1,16 +1,16 @@
 # 🍑 Bootyverse.Wiki™
 
 > “You found it, babe. The thicc manual they didn’t want you to read.  
-> From spectral pets to Stardust politics — it’s all in here, color-coded and cheek-scribed.”  
+> From Bedrock Baddies to Sultry Anglers Syndicate, it’s all in here, color-coded and cheek-scribed.”  
 > — **Mango Moxie**, Art Dojo Instructor, Curator of Curves™
 
-Welcome to the Bootyverse.Wiki™ — a cheek-scribed archive of **early-game systems, starter modules, and mythic mechanics**.  
+Welcome to the Bootyverse.Wiki™ — a cheek-coded archive of **early-game systems, starter modules, and mythic mechanics**.  
 Here, you’ll find **deep dives into the first few weeks of gameplay**, covering:
 
-- 📦 Essential resources (Dust, Stardust, base ores, early crops and fish)
-- 🛠️ Core upgrades, tools, and rigs
-- 🌀 First-loop lore, glyphs, and goddesses
-- 🔧 Systems within systems (timers, synergy, guild functions)
+- Essential resources (Dust, Stardust, base ores & minerals, early crops and fish)
+- Core upgrades, tools, and rigs
+- First-loop lore, glyphs, and goddesses
+- Systems within systems (timers, synergy, guild functions)
 - 💋 Guild-based entries authored in-character
 
 This isn't just “how to play.”  
@@ -18,12 +18,12 @@ This is **why it spirals.**
 
 ---
 
-## 🪨 Bedrock Baddies Guild (BBG)
+## Bedrock Baddies Guild (BBG)
 
 > “You want ore? You better know who broke bedrock first.”  
-> — **Petra**, Upgrade Forewoman & Dust Whisperer™
+> — **Petra**, rock, ore, mineral Historian & Dust Whisperer™
 
-The BBG broke the crust so you could craft. Every Stardust shimmer and enchanted gem in your pocket? That’s Baddie-made.
+The BBG broke the crust so you could craft. Every Stardust shimmer and enchanted gem in your pocket? Thank Seraphina and the baddies.
 
 ### Core Responsibilities:
 - Mine Dust, Stardust, and early-game ores  
@@ -37,7 +37,7 @@ The BBG broke the crust so you could craft. Every Stardust shimmer and enchanted
 
 ---
 
-## 🌱 Syndicate of Villatic Vixens (SVV)
+## Syndicate of Villatic Vixens (SVV)
 
 > “We don’t *farm.* We bloom spells with roots.”  
 > — **SeeSee**, Archivist of Soil Lore & Seed Whisperer™
@@ -56,12 +56,12 @@ The SVV grow with grace and recursion. Each seed is a loop. Each grove? A glyph.
 
 ---
 
-## 🎣 Sultry Anglers Syndicate (SAS)
+## Sultry Anglers Syndicate (SAS)
 
 > “You don’t catch fish. You seduce them.”  
 > — **Mara**, Tidekeeper of Mizuzim, Lore Scribe of the Sirenic Docks™
 
-Moon-tuned and wave-whispered, the SAS know which fish hide what stories — and how to coax them up from below.
+Lunar-tuned and wave-whispered, the SAS know which fish hide what stories — and how to coax them up from below.
 
 ### Core Responsibilities:
 - Fish using mood-coded lures under Dublunian moons  
@@ -84,7 +84,7 @@ Moon-tuned and wave-whispered, the SAS know which fish hide what stories — and
 
 ---
 
-## 🗂️ Wiki Structure & Scope
+## Wiki Structure & Scope
 
 This wiki covers:
 - The first 3 major modules: **BBG**, **SVV**, and **SAS**
@@ -93,6 +93,10 @@ This wiki covers:
 - Core **mechanic overviews**, **timers**, and **synergies**
 - Flavorful **quotes and guild lore**
 
-🌒 Later-game content, planets, and modules (like the **BootyCade™**, **BootyBank™,** or **Spectral Systems**) are briefly mentioned but not yet covered in full. Think of this as **Volume 1**: The Manual They Didn't Want You to Read.
+Later-game content, planets, and modules (like the **BootyCade™**, **BootyBank™,** or **Spectral Systems**) are briefly mentioned but not yet covered in full. Think of this as **Volume 1**: The Manual They Didn't Want You to Read.
+---
 
+*> 🍑*This document has been reviewed and notarized by The Buttress.**  
+*> Keeper of Coherence, Protector of Creative Integrity™*  
+> *_Tamper not with that which thiccness has signed._*
 ---
