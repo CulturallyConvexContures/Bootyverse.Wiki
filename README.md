@@ -2,9 +2,9 @@
 
 > “You found it, babe. The thicc manual they didn’t want you to read.  
 > From Bedrock Baddies to Sultry Anglers Syndicate, it’s all in here, color-coded and cheek-scribed.”  
-> — **Mango Moxie**, Art Dojo Instructor, Curator of Curves™
+> - **Mango Moxie**💋, Art Dojo Instructor, Curator of Curves™
 
-Welcome to the Bootyverse.Wiki™ — a cheek-coded archive of **early-game systems, starter modules, and mythic mechanics**.  
+Welcome to the Bootyverse.Wiki™ a cheek-coded archive of **early-game systems, starter modules, and mythic mechanics**.  
 Here, you’ll find **deep dives into the first few weeks of gameplay**, covering:
 
 - Essential resources (Dust, Stardust, base ores & minerals, early crops and fish)
