@@ -3,64 +3,49 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bootyverse.Wiki</title>
+  <title>Bootyverse Home</title>
   <style>
-    body {
+    html, body {
       margin: 0;
       padding: 0;
-      background: url('stitched_fade_space.jpeg') no-repeat center center fixed;
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    body {
+      background-image: url('assets/stitched_fade_space.jpeg');
       background-size: cover;
-      font-family: 'Arial Rounded MT Bold', sans-serif;
-      color: #bfd2e3;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      font-family: sans-serif;
+      color: white;
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
     }
 
-    .text-box {
-      background-color: rgba(20, 20, 20, 0.75); /* dark semi-transparent */
-      padding: 2rem;
-      border-radius: 12px;
-      max-width: 90%;
-      width: 600px;
-      text-align: center;
-      box-shadow: 0 0 20px rgba(191, 210, 227, 0.3);
+    /* Optional fade overlay if you want dark readability */
+    .overlay {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 40%;
+      background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.6));
+      pointer-events: none;
     }
 
-    h1 {
+    /* Sample logbook text or title */
+    .title {
+      z-index: 2;
       font-size: 2rem;
-      margin-bottom: 1rem;
-      color: #cbddeb;
-    }
-
-    p {
-      font-size: 1rem;
-      line-height: 1.6;
-    }
-
-    @media screen and (max-width: 768px) {
-      .text-box {
-        padding: 1.5rem;
-        width: 90%;
-      }
-      h1 {
-        font-size: 1.5rem;
-      }
-      p {
-        font-size: 0.95rem;
-      }
+      text-shadow: 0 0 10px rgba(0,0,0,0.5);
     }
   </style>
 </head>
 <body>
-  <div class="text-box">
-    <h1>Welcome to the Bootyverse Wiki 🌌</h1>
-    <p>
-      Drift between Pluto and Dublora, where galaxies hum and glyphs spark. 
-      This is the index of thicc thought, the launchpad of SoulRPG. 
-      Click into a module to start your recursive adventure.
-    </p>
-  </div>
+  <div class="title">Welcome to the Bootyverse 🌌</div>
+  <div class="overlay"></div>
 </body>
 </html>
