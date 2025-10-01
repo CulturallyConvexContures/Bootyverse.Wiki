@@ -15,7 +15,10 @@
 
     body {
       background-image: url('assets/stitched_fade_space.jpeg');
-      background-size: cover;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: top center;
+      background-color: black; /* fills gaps if image doesn't cover full screen */
       background-position: center;
       background-repeat: no-repeat;
       background-attachment: fixed;
