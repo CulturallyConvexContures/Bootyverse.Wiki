@@ -1,0 +1,17 @@
+/* style.css */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #0B0E12;
+  /* … other default styles … */
+}
+
+.glass-card {
+  background: rgba(10, 14, 18, 0.3);
+  border: 1px solid rgba(191, 210, 227, 0.2);
+  border-radius: 24px;
+  backdrop-filter: blur(12px);
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 0 12px rgba(191, 210, 227, 0.1);
+}
