@@ -6,6 +6,7 @@ html, body {
   padding: 0;
   font-family: 'Press Start 2P', monospace;
   color: #e0e8f0;
+  overscroll-behavior: none; 
   background: #2a3142 url('assets/C3C90C68-3C06-432F-9FAB-7582DC318C65.png') center/cover no-repeat fixed;
   height: 100vh;
   overflow: hidden;
