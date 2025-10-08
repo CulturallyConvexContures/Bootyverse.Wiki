@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: #1b2220 url('assets/svv_bg.png') center/cover no-repeat fixed;
+  color: #e8ffe8;
+  font-family: 'Press Start 2P', monospace;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+
+/* Overlay for dreamy glow */
+.overlay {
+  background: rgba(10, 25, 15, 0.75);
+  backdrop-filter: blur(0.5px);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Header */
+header {
+  text-align: center;
+  margin-top: 1rem;
+}
+.subtitle {
+  font-size: 0.7rem;
+  opacity: 0.8;
+  color: #b4ffb4;
+}
+
+/* Content */
+.content {
+  flex: 1;
+  padding: 1.5rem;
+  max-width: 720px;
+  margin: 0 auto;
+}
+.image img {
+  width: 100%;
+  border: 2px solid #88ffbb;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(136, 255, 187, 0.4);
+  margin-bottom: 1.2rem;
+}
+
+/* Lore styling */
+.lore h2 {
+  color: #88ffbb;
+  font-size: 0.8rem;
+  margin-top: 1.5rem;
+}
+.lore p, .lore ul {
+  font-size: 0.6rem;
+  line-height: 1.6;
+}
+.lore ul {
+  list-style-type: square;
+  padding-left: 1rem;
+}
+
+/* Table (if added later) */
+table {
+  width: 100%;
+  font-size: 0.55rem;
+  border-collapse: collapse;
+  margin-top: 0.5rem;
+}
+th, td {
+  border: 1px solid #446644;
+  padding: 0.4rem;
+}
+th {
+  background: rgba(136, 255, 187, 0.3);
+  color: #fff;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.55rem;
+  opacity: 0.8;
+  background: rgba(5, 15, 10, 0.85);
+}
+button {
+  margin-top: 0.5rem;
+  background: none;
+  border: 1px solid #88ffbb;
+  color: #fff;
+  padding: 0.4rem 0.8rem;
+  cursor: pointer;
+  transition: 0.2s;
+}
+button:hover {
+  background: rgba(136, 255, 187, 0.1);
+}
