@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: #1a1e2a url('assets/mining_bg_placeholder.png') center/cover no-repeat fixed;
+  color: #e8f0ff;
+  font-family: 'Press Start 2P', monospace;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+
+/* Overlay style to match wiki aesthetic */
+.overlay {
+  background: rgba(10, 15, 30, 0.75);
+  backdrop-filter: blur(2px);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Header */
+header {
+  text-align: center;
+  margin-top: 1rem;
+}
+.subtitle {
+  font-size: 0.7rem;
+  opacity: 0.8;
+}
+
+/* Content */
+.content {
+  flex: 1;
+  padding: 1.5rem;
+  max-width: 720px;
+  margin: 0 auto;
+}
+.image img {
+  width: 100%;
+  border: 2px solid #ff9966;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(255, 153, 102, 0.4);
+  margin-bottom: 1.2rem;
+}
+
+/* Lore text styling */
+.lore h2 {
+  color: #ff9966;
+  font-size: 0.8rem;
+  margin-top: 1.5rem;
+}
+.lore p, .lore ul {
+  font-size: 0.6rem;
+  line-height: 1.6;
+}
+.lore ul {
+  list-style-type: square;
+  padding-left: 1rem;
+}
+
+/* Table */
+table {
+  width: 100%;
+  font-size: 0.55rem;
+  border-collapse: collapse;
+  margin-top: 0.5rem;
+}
+th, td {
+  border: 1px solid #666;
+  padding: 0.4rem;
+}
+th {
+  background: rgba(255, 153, 102, 0.3);
+  color: #fff;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.55rem;
+  opacity: 0.8;
+  background: rgba(5, 10, 20, 0.85);
+}
+button {
+  margin-top: 0.5rem;
+  background: none;
+  border: 1px solid #ff9966;
+  color: #fff;
+  padding: 0.4rem 0.8rem;
+  cursor: pointer;
+  transition: 0.2s;
+}
+button:hover {
+  background: rgba(255, 153, 102, 0.1);
+}
