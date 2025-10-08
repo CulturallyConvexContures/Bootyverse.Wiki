@@ -1,17 +1,87 @@
-/* style.css */
+/* ------------- Base ------------- */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
 body {
   margin: 0;
-  padding: 0;
-  background-color: #0B0E12;
-  /* … other default styles … */
+  font-family: 'Press Start 2P', monospace;
+  color: #e0e8f0;
+  background: url('images/placeholder_desk_bg.png') center/cover no-repeat fixed;
+  height: 100vh;
+  overflow: hidden;
 }
 
-.glass-card {
-  background: rgba(10, 14, 18, 0.3);
-  border: 1px solid rgba(191, 210, 227, 0.2);
-  border-radius: 24px;
-  backdrop-filter: blur(12px);
-  padding: 2rem;
+/* Subtle tinted overlay to unify palette */
+.overlay {
+  background: rgba(15, 25, 45, 0.7);
+  backdrop-filter: blur(4px);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* ------------- Header ------------- */
+header {
   text-align: center;
-  box-shadow: 0 0 12px rgba(191, 210, 227, 0.1);
+  margin-top: 3vh;
+}
+
+.subtitle {
+  font-size: 0.7rem;
+  opacity: 0.8;
+}
+
+/* ------------- Desk Area ------------- */
+.desk {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+  padding: 2rem;
+}
+
+.paper {
+  background: rgba(30, 40, 60, 0.8);
+  border: 2px solid #8aa;
+  border-radius: 12px;
+  padding: 1.5rem;
+  width: 220px;
+  text-align: center;
+  text-decoration: none;
+  color: #dfe;
+  box-shadow: 0 0 10px rgba(100, 150, 255, 0.2);
+  transition: 0.25s ease;
+}
+
+.paper:hover {
+  transform: scale(1.05) rotate(-1deg);
+  box-shadow: 0 0 20px rgba(180, 220, 255, 0.5);
+}
+
+/* Color accents for each file */
+.bbg { border-color: #ff9966; }
+.svv { border-color: #88ffbb; }
+.sas { border-color: #99bbff; }
+
+/* ------------- Footer ------------- */
+footer {
+  text-align: center;
+  padding-bottom: 1.5rem;
+  font-size: 0.6rem;
+  opacity: 0.8;
+}
+
+button {
+  margin-top: 0.5rem;
+  background: none;
+  border: 1px solid #88a;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: rgba(255, 255, 255, 0.1);
 }
