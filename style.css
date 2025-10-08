@@ -1,22 +1,39 @@
 /* ------------- Base ------------- */
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
-html, body {
+/* Root fix — prevent viewport resizing on mobile scroll or bounce */
+html {
   margin: 0;
   padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden; /* ✅ Hard lock */
+  position: fixed; /* ✅ Prevent movement during Safari bounce */
+  top: 0;
+  left: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
   font-family: 'Press Start 2P', monospace;
   color: #e0e8f0;
-  overscroll-behavior: none; 
   background: #2a3142 url('assets/C3C90C68-3C06-432F-9FAB-7582DC318C65.png') center/cover no-repeat fixed;
-  height: 100vh;
-  overflow: hidden;
+  overscroll-behavior: none;
+  -webkit-overflow-scrolling: auto;
 }
 
 /* Subtle tinted overlay to unify palette */
 .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background: rgba(15, 25, 45, 0.78);
   backdrop-filter: blur(1px);
-  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -97,7 +114,7 @@ button:hover {
   background: rgba(255, 255, 255, 0.1);
 }
 
-/* Prevent zoom scaling breaking layout on mobile */
+/* ------------- Mobile Fine-Tuning ------------- */
 @media (max-height: 750px) {
   .paper { padding: 0.8rem; }
   header h1 { font-size: 1rem; }
