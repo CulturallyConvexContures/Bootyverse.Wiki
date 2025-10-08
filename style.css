@@ -1,35 +1,20 @@
-/* ------------- Base ------------- */
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
-/* Root fix — prevent viewport resizing on mobile scroll or bounce */
-html {
+html, body {
   margin: 0;
   padding: 0;
-  height: 100%;
+  height: 100dvh; /* ✅ Uses dynamic viewport height (iPhone safe) */
   width: 100%;
-  overflow: hidden; /* ✅ Hard lock */
-  position: fixed; /* ✅ Prevent movement during Safari bounce */
-  top: 0;
-  left: 0;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  width: 100%;
+  overflow: hidden; /* ✅ Prevents scroll */
+  overscroll-behavior: none;
   font-family: 'Press Start 2P', monospace;
   color: #e0e8f0;
   background: #2a3142 url('assets/C3C90C68-3C06-432F-9FAB-7582DC318C65.png') center/cover no-repeat fixed;
-  overscroll-behavior: none;
-  -webkit-overflow-scrolling: auto;
 }
 
-/* Subtle tinted overlay to unify palette */
+/* Unified overlay */
 .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
+  position: relative;
   width: 100%;
   height: 100%;
   background: rgba(15, 25, 45, 0.78);
@@ -38,48 +23,56 @@ body {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 1.2rem 0;
+  padding: 0.6rem 0; /* ⬇️ reduced padding */
   box-sizing: border-box;
+  overflow: hidden;
 }
 
 /* ------------- Header ------------- */
 header {
   text-align: center;
-  margin-top: 0.5rem;
+  margin-top: 0.3rem;
+  flex-shrink: 0; /* ✅ prevents vertical overflow */
+}
+
+header h1 {
+  font-size: 0.9rem;
 }
 
 .subtitle {
-  font-size: 0.65rem;
+  font-size: 0.6rem;
   opacity: 0.8;
 }
 
 /* ------------- Desk Area ------------- */
 .desk {
+  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
-  flex: 1;
-  padding: 0 1rem;
+  gap: 0.7rem; /* ⬇️ slightly tighter */
+  padding: 0 0.5rem;
+  box-sizing: border-box;
 }
 
 .paper {
   background: rgba(25, 30, 50, 0.9);
   border: 2px solid #8aa;
-  border-radius: 12px;
-  padding: 1rem;
-  width: 80%;
-  max-width: 280px;
+  border-radius: 10px;
+  padding: 0.8rem; /* ⬇️ less padding */
+  width: 75%;
+  max-width: 250px;
   text-align: center;
   text-decoration: none;
   color: #dfe;
+  font-size: 0.6rem; /* ⬇️ smaller text */
   box-shadow: 0 0 10px rgba(100, 150, 255, 0.25);
   transition: 0.25s ease;
 }
 
 .paper:hover {
-  transform: scale(1.05) rotate(-1deg);
+  transform: scale(1.04);
   box-shadow: 0 0 20px rgba(180, 220, 255, 0.5);
 }
 
@@ -91,22 +84,23 @@ header {
 /* ------------- Footer ------------- */
 footer {
   text-align: center;
-  padding-bottom: 0.5rem;
-  font-size: 0.55rem;
+  padding: 0.3rem 0; /* ⬇️ less vertical padding */
+  font-size: 0.5rem;
   opacity: 0.7;
   background: rgba(10, 15, 25, 0.8);
   width: 100%;
   box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
+  flex-shrink: 0; /* ✅ prevents footer from forcing overflow */
 }
 
 button {
-  margin-top: 0.4rem;
+  margin-top: 0.3rem;
   background: none;
   border: 1px solid #88a;
   color: #fff;
-  padding: 0.4rem 0.9rem;
+  padding: 0.35rem 0.8rem;
   cursor: pointer;
-  font-size: 0.5rem;
+  font-size: 0.45rem;
   transition: 0.2s;
 }
 
@@ -116,6 +110,7 @@ button:hover {
 
 /* ------------- Mobile Fine-Tuning ------------- */
 @media (max-height: 750px) {
-  .paper { padding: 0.8rem; }
-  header h1 { font-size: 1rem; }
+  header h1 { font-size: 0.8rem; }
+  .paper { padding: 0.6rem; }
+  footer { font-size: 0.45rem; }
 }
