@@ -6,61 +6,90 @@
   <title>Bootyverse Thicclopedia</title>
 
   <style>
-    /* Fullscreen Pluto vibes */
     html, body {
       margin: 0; padding: 0;
       height: 100vh; width: 100vw;
-      overflow: hidden; background-color: #0B0E12;
+      overflow: hidden;
+      background-color: #0B0E12;
       font-family: 'Segoe UI', sans-serif; color: #F2F2F2;
-      overscroll-behavior: none; position: fixed; touch-action: none;
+      overscroll-behavior: none; position: relative;
+      touch-action: none;
     }
+
     body {
-      display: flex; justify-content: center; align-items: center; position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       background-image: url('assets/Background1.png');
-      background-size: cover; background-position: center;
+      background-size: cover;
+      background-position: center;
     }
+
     ::-webkit-scrollbar { display: none; }
 
     .glass-card {
       background: rgba(10,14,18,0.3);
       border: 1px solid rgba(191,210,227,0);
-      border-radius: 24px; backdrop-filter: blur(0px);
-      padding: 2rem; text-align: center;
+      border-radius: 24px;
+      backdrop-filter: blur(0px);
+      padding: 2rem;
+      text-align: center;
       box-shadow: 0 0 12px rgba(191,210,227,0.1);
     }
-    .subtitle { font-size: 1.2rem; margin-bottom: 1rem; color: #7FA7C2; }
+
+    .subtitle {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+      color: #7FA7C2;
+    }
+
     .glow-text {
       color: #BFD2E3;
-      text-shadow: 0 0 4px rgba(191,210,227,0.5), 0 0 8px rgba(191,210,227,0.4), 0 0 12px rgba(191,210,227,0.2);
+      text-shadow: 0 0 4px rgba(191,210,227,0.5),
+                   0 0 8px rgba(191,210,227,0.4),
+                   0 0 12px rgba(191,210,227,0.2);
     }
-    .footer-emoji { font-size: .8rem; margin-top: 1.25rem; opacity: 0.9; text-shadow: 0 0 6px rgba(191,210,227,0.5); }
 
-    /* Clicker image */
     #clicker {
-      width: 220px; max-width: 70vw;
+      width: 220px;
+      max-width: 70vw;
       border-radius: 16px;
       image-rendering: pixelated;
-      user-select: none; -webkit-user-drag: none;
+      user-select: none;
+      -webkit-user-drag: none;
       cursor: pointer;
       filter: drop-shadow(0 0 10px rgba(191,210,227,0.35));
       transition: filter 0.15s ease;
-      touch-action: manipulation; /* allow taps */
+      touch-action: manipulation;
     }
+
     #clicker.shake { animation: shake 120ms ease; }
     @keyframes shake {
-      0%{transform:translate(0,0) rotate(0)} 25%{transform:translate(-4px,0) rotate(-2deg)}
-      50%{transform:translate(1px,0) rotate(1deg)} 75%{transform:translate(-1px,0) rotate(-.5deg)}
+      0%{transform:translate(0,0) rotate(0)}
+      25%{transform:translate(-4px,0) rotate(-2deg)}
+      50%{transform:translate(1px,0) rotate(1deg)}
+      75%{transform:translate(-1px,0) rotate(-.5deg)}
       100%{transform:translate(0,0) rotate(0)}
     }
 
-    #counter { margin: .75rem 0 1rem; font-weight: 700; }
+    #counter {
+      margin: .75rem 0 1rem;
+      font-weight: 700;
+    }
+
     footer {
-      text-align: center; padding: 1rem;
-      background-color: rgba(0,0,41,0.2);
-      color: #111; font-weight: 500; font-size: 0.6rem;
-      position: fixed; bottom: 0; width: 100%;
-      backdrop-filter: blur(1px);
-      border-top: 1px solid rgba(255,255,255,0.2);
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      padding: 0.8rem 1rem;
+      background-color: rgba(0,0,41,0.25);
+      color: #BFD2E3;
+      font-size: 0.65rem;
+      font-weight: 500;
+      backdrop-filter: blur(3px);
+      border-top: 1px solid rgba(255,255,255,0.15);
       text-shadow: 0 0 2px rgba(255,255,255,0.3);
     }
   </style>
@@ -68,13 +97,9 @@
 <body>
   <div class="glass-card">
     <div class="subtitle glow-text">Enter The Bootyverse Thicclopedia</div>
-
-    <!-- TAP THIS IMAGE TO EARN DOUBLOONS -->
     <img id="clicker" src="assets/IMG_8795.jpeg" alt="Tap Cheeks for Doubloons">
-
     <div id="counter" class="glow-text">Doubloons: 0</div>
-
-  
+  </div>
 
   <footer>
     <p class="glow-text">by accessing this site you are assumed to be 21+ years of age.</p>
@@ -84,9 +109,9 @@
   <script>
     (function () {
       let doubloons = 0;
-      const PER_CLICK = 7;     // per tap
-      const TARGET    = 100;   // teleport threshold
-      let teleported  = false; // prevent double-fire
+      const PER_CLICK = 7;
+      const TARGET = 100;
+      let teleported = false;
 
       const clicker = document.getElementById('clicker');
       const counter = document.getElementById('counter');
@@ -95,16 +120,12 @@
         doubloons += PER_CLICK;
         counter.textContent = 'Doubloons: ' + doubloons;
 
-        // tap shake
         clicker.classList.add('shake');
         setTimeout(() => clicker.classList.remove('shake'), 140);
 
-        // auto-teleport
         if (!teleported && doubloons >= TARGET) {
           teleported = true;
-          // use href for back-button support; replace() to prevent back
           window.location.href = 'wikihome.html';
-          // window.location.replace('wikihome.html');
         }
       }
 
