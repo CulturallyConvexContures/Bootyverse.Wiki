@@ -17,12 +17,12 @@ html, body {
   position: relative;
   width: 100%;
   height: 100%;
-  background: rgba(15, 25, 45, 0);
+  background: rgba(15, 25, 45, 0.15); /* ✨ slightly darker for text contrast */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 0.6rem 0; /* ⬇️ reduced padding */
+  padding: 0.6rem 0;
   box-sizing: border-box;
   overflow: hidden;
 }
@@ -31,16 +31,25 @@ html, body {
 header {
   text-align: center;
   margin-top: 0.3rem;
-  flex-shrink: 0; /* ✅ prevents vertical overflow */
+  flex-shrink: 0;
+  background: rgba(20, 25, 40, 0.65); /* ✨ subtle translucent backdrop */
+  border-radius: 8px;
+  box-shadow: 0 2px 8px #0018;
+  padding: 0.3rem 1rem;
+  display: inline-block;
 }
 
 header h1 {
   font-size: 0.9rem;
+  margin: 0;
+  text-shadow: 0 1px 3px #000, 0 0 7px #233, 0 0 2px #fff2;
 }
 
 .subtitle {
   font-size: 0.6rem;
-  opacity: 0.8;
+  opacity: 0.9;
+  text-shadow: 0 1px 3px #000, 0 0 6px #233, 0 0 2px #fff2;
+  margin: 0.2rem 0 0 0;
 }
 
 /* ------------- Desk Area ------------- */
@@ -50,29 +59,31 @@ header h1 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 0.7rem; /* ⬇️ slightly tighter */
+  gap: 0.7rem;
   padding: 0 0.5rem;
   box-sizing: border-box;
 }
 
 .paper {
-  background: rgba(25, 30, 50, 1);
+  background: rgba(25, 30, 50, 0.5); /* ✨ 50% opacity glass effect */
+  backdrop-filter: blur(4px);
   border: 2px solid #8aa;
   border-radius: 10px;
-  padding: 0.8rem; /* ⬇️ less padding */
+  padding: 0.8rem;
   width: 75%;
   max-width: 250px;
   text-align: center;
   text-decoration: none;
   color: #dfe;
-  font-size: 0.6rem; /* ⬇️ smaller text */
+  font-size: 0.6rem;
   box-shadow: 0 0 10px rgba(100, 150, 255, 0.25);
   transition: 0.25s ease;
+  text-shadow: 0 1px 3px #000, 0 0 7px #233, 0 0 2px #fff2; /* ✨ glow pop */
 }
 
 .paper:hover {
   transform: scale(1.04);
-  box-shadow: 0 0 20px rgba(180, 220, 255, 0.5);
+  box-shadow: 0 0 20px rgba(180, 220, 255, 0.6);
 }
 
 /* Color accents for each file */
@@ -83,28 +94,31 @@ header h1 {
 /* ------------- Footer ------------- */
 footer {
   text-align: center;
-  padding: 0.3rem 0; /* ⬇️ less vertical padding */
+  padding: 0.3rem 0;
   font-size: 0.5rem;
-  opacity: 0.7;
-  background: rgba(10, 15, 25, 0.8);
+  opacity: 0.8;
+  background: rgba(10, 15, 25, 0.75);
   width: 100%;
   box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
-  flex-shrink: 0; /* ✅ prevents footer from forcing overflow */
+  flex-shrink: 0;
+  text-shadow: 0 1px 3px #000, 0 0 5px #223, 0 0 2px #fff2;
 }
 
 button {
   margin-top: 0.3rem;
-  background: none;
+  background: rgba(255, 255, 255, 0.08);
   border: 1px solid #88a;
   color: #fff;
   padding: 0.35rem 0.8rem;
   cursor: pointer;
   font-size: 0.45rem;
   transition: 0.2s;
+  border-radius: 6px;
 }
 
 button:hover {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.15);
+  transform: scale(1.05);
 }
 
 /* ------------- Mobile Fine-Tuning ------------- */
