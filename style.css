@@ -91,6 +91,25 @@ header h1 {
 .svv { border-color: #88ffbb; }
 .sas { border-color: #99bbff; }
 
+/* Color accents for each file */
+.bbg {
+  border-color: #ff9966;
+  color: #ff9966;               /* 🔸 text matches border */
+  text-shadow: 0 1px 3px #000, 0 0 5px rgba(255,153,102,0.6);
+}
+
+.svv {
+  border-color: #88ffbb;
+  color: #88ffbb;               /* 🟢 mint text */
+  text-shadow: 0 1px 3px #000, 0 0 5px rgba(136,255,187,0.6);
+}
+
+.sas {
+  border-color: #99bbff;
+  color: #99bbff;               /* 🔵 soft-blue text */
+  text-shadow: 0 1px 3px #000, 0 0 5px rgba(153,187,255,0.6);
+}
+
 /* ------------- Footer ------------- */
 footer {
   text-align: center;
