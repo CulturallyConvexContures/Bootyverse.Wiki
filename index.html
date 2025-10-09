@@ -2,140 +2,128 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0">
   <title>Bootyverse Thicclopedia</title>
-  
-  <style>
-    /* Lock to iPhone 12 Pro Max resolution (1284 x 2778) */
-    html, body {
-      margin: 0;
-      padding: 0;
-      height: 100vh;
-      width: 100vw;
-      overflow: hidden;
-      background-color: #0B0E12;
-      font-family: 'Segoe UI', sans-serif;
-      color: #F2F2F2;
-    }
 
-    body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: relative;
-      background-image: url('assets/Background1.png'); /* replace with real pixel bg */
-      background-size: cover;
-      background-position: center;
+  <style>
+    /* Lock to iPhone 12 Pro Max proportions + frost vibe */
+    html, body {
+      margin: 0; padding: 0;
+      height: 100vh; width: 100vw;
+      overflow: hidden; background-color: #0B0E12;
+      font-family: 'Segoe UI', sans-serif; color: #F2F2F2;
+      overscroll-behavior: none; position: fixed; touch-action: none;
     }
+    body {
+      display: flex; justify-content: center; align-items: center; position: relative;
+      background-image: url('assets/Background1.png');
+      background-size: cover; background-position: center;
+    }
+    ::-webkit-scrollbar { display: none; }
 
     .glass-card {
-      background: rgba(10, 14, 18, 0.3);
-      border: 1px solid rgba(191, 210, 227, 0.2);
-      border-radius: 24px;
-      backdrop-filter: blur(6px);
-      padding: 2rem;
-      text-align: center;
-      box-shadow: 0 0 12px rgba(191, 210, 227, 0.1);
+      background: rgba(10,14,18,0.3);
+      border: 1px solid rgba(191,210,227,0.2);
+      border-radius: 24px; backdrop-filter: blur(6px);
+      padding: 2rem; text-align: center;
+      box-shadow: 0 0 12px rgba(191,210,227,0.1);
     }
-
-    h1 {
-      font-size: 2.2rem;
-      margin-bottom: 0.5rem;
+    .subtitle { font-size: 1.2rem; margin-bottom: 1rem; color: #7FA7C2; }
+    .glow-text {
       color: #BFD2E3;
+      text-shadow: 0 0 4px rgba(191,210,227,0.5), 0 0 8px rgba(191,210,227,0.4), 0 0 12px rgba(191,210,227,0.2);
+    }
+    .footer-emoji { font-size: .8rem; margin-top: 1.25rem; opacity: 0.9; text-shadow: 0 0 6px rgba(191,210,227,0.5); }
+
+    /* Clicker image */
+    #clicker {
+      width: 220px; max-width: 70vw;
+      border-radius: 16px;
+      image-rendering: pixelated;
+      user-select: none; -webkit-user-drag: none;
+      cursor: pointer;
+      filter: drop-shadow(0 0 10px rgba(191,210,227,0.35));
+      transition: filter 0.15s ease;
+      /* allow taps despite global touch-action:none */
+      touch-action: manipulation;
+    }
+    #clicker.shake { animation: shake 120ms ease; }
+    @keyframes shake {
+      0%{transform:translate(0,0) rotate(0)} 25%{transform:translate(-2px,0) rotate(-1deg)}
+      50%{transform:translate(2px,0) rotate(1deg)} 75%{transform:translate(-1px,0) rotate(-.5deg)}
+      100%{transform:translate(0,0) rotate(0)}
     }
 
-    .subtitle {
-      font-size: 1.2rem;
-      margin-bottom: 2rem;
-      color: #7FA7C2;
+    #counter { margin: .75rem 0 1rem; font-weight: 700; }
+    #unlock { display: none; margin-top: 0.75rem; }
+    #unlock a {
+      display: inline-block; padding: 10px 16px; border-radius: 14px;
+      color: #0B0E12; font-weight: 700; text-decoration: none;
+      background: linear-gradient(145deg, #5C7EA7, #7FA7C2);
+      box-shadow: 0 0 12px rgba(191,210,227,0.25);
     }
 
-    .btn {
-      padding: 12px 24px;
-  font-size: 1.1rem;
-  font-weight: bold;
-  background: rgba(255, 255, 255, 0.1);
-  color: #fff;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 20px;
-  backdrop-filter: blur(3px);
-  text-shadow:
-    0 0 4px rgba(191, 210, 227, 0.8),
-    0 0 8px rgba(191, 210, 227, 0.5);
-  box-shadow:
-    0 0 12px rgba(191, 210, 227, 0.15),
-    inset 0 0 6px rgba(255, 255, 255, 0.05);
-  transition: all 0.2s ease-in-out;
-  cursor: pointer;
-}
-
-
-    .btn:active {
-      transform: scale(0.95);
-      background: linear-gradient(145deg, #BFD2E3, #7FA7C2);
+    footer {
+      text-align: center; padding: 1rem;
+      background-color: rgba(0,0,41,0.2);
+      color: #111; font-weight: 500; font-size: 0.6rem;
+      position: fixed; bottom: 0; width: 100%;
+      backdrop-filter: blur(3px);
+      border-top: 1px solid rgba(255,255,255,0.2);
+      text-shadow: 0 0 2px rgba(255,255,255,0.3);
     }
-
-    .footer-emoji {
-      font-size: .8rem;
-      text-shadow:
-    0 0 4px rgba(191, 210, 227, 0.5),
-    0 0 8px rgba(191, 210, 227, 0.4),
-    0 0 12px rgba(191, 210, 227, 0.2);
-      margin-top: 1.5rem;
-      opacity: 0.8;
-    }
-    
-    body, html {
-  overscroll-behavior: none;
-  overflow: hidden;
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  touch-action: none;
-}
-::-webkit-scrollbar {
-  display: none;
-}
-
-
-  .glow-text {
-    color: #BFD2E3;
-    text-shadow:
-      0 0 4px rgba(191, 210, 227, 0.5),
-      0 0 8px rgba(191, 210, 227, 0.4),
-      0 0 12px rgba(191, 210, 227, 0.2);
-  }
-
-  footer {
-  text-align: center;
-  padding: 1rem;
-  background-color: rgba(0, 0, 41, 0.2); /* translucent white */
-  color: #111; /* slightly deeper gray for better contrast */
-  font-weight: 500;
-  text-shadow: 0 0 2px rgba(255, 255, 255, 0.3); /* glow edge */
-  font-size: 0.6rem;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  backdrop-filter: blur(3px); /* frosted-glass feel */
-  border-top: 1px solid rgba(255, 255, 255, 0.2); /* subtle separator */
-}
   </style>
 </head>
 <body>
   <div class="glass-card">
     <div class="subtitle glow-text">Enter The Bootyverse Thicclopedia</div>
-   <a href="wikihome.html">
-  <img src="assets/btn4.png" alt="Boot it up" style="width: 200px; border-radius: 16px;" />
-</a>
+
+    <!-- TAP THIS IMAGE TO EARN DOUBLOONS -->
+    <!-- Replace the src with your art: e.g. 'assets/clicker.png' -->
+    <img id="clicker" src="assets/btn4.png" alt="Tap to gather Doubloons">
+
+    <div id="counter" class="glow-text">Doubloons: 0</div>
+
+    <!-- Appears once you have enough Doubloons -->
+    <div id="unlock">
+      <a href="wikihome.html">📖 Enter the Wiki</a>
+    </div>
+
     <div class="footer-emoji">🧊🌀🍰✨</div>
   </div>
 
-<!-- ... -->
-<footer>
-  <p class="glow-text">by accessing this site you are assumed to be 21+ years of age.</p>
-  <p class="glow-text">© 2026 Bootyverse Studios. All cheeks reserved 🍑</p>
-  <p class="glow-text">v.6.9.4203</p>
-</footer>
+  <footer>
+    <p class="glow-text">by accessing this site you are assumed to be 21+ years of age.</p>
+    <p class="glow-text">© 2026 Bootyverse Studios. All cheeks reserved 🍑</p>
+    <p class="glow-text">v.6.9.4203</p>
+  </footer>
+
+  <script>
+    (function () {
+      let doubloons = 0;
+      const PER_CLICK = 7;     // ← tweak per-tap reward
+      const TARGET    = 100;   // ← tweak unlock threshold
+
+      const clicker = document.getElementById('clicker');
+      const counter = document.getElementById('counter');
+      const unlock  = document.getElementById('unlock');
+
+      function addDoubloons() {
+        doubloons += PER_CLICK;
+        counter.textContent = 'Doubloons: ' + doubloons;
+        // tap shake
+        clicker.classList.add('shake');
+        setTimeout(() => clicker.classList.remove('shake'), 140);
+        // unlock link
+        if (doubloons >= TARGET && unlock.style.display === 'none') {
+          unlock.style.display = 'block';
+        }
+      }
+
+      // Support both click and touch
+      clicker.addEventListener('click', addDoubloons);
+      clicker.addEventListener('touchstart', (e) => { e.preventDefault(); addDoubloons(); }, { passive: false });
+    })();
+  </script>
 </body>
 </html>
