@@ -12,43 +12,16 @@
       overflow: hidden;
       background-color: #0B0E12;
       font-family: 'Segoe UI', sans-serif; color: #F2F2F2;
-      overscroll-behavior: none; position: relative;
-      touch-action: none;
-    }
-
-    body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      overscroll-behavior: none;
+      display: flex; flex-direction: column;
+      justify-content: center; align-items: center;
       background-image: url('assets/Background1.png');
       background-size: cover;
       background-position: center;
+      touch-action: none;
     }
 
     ::-webkit-scrollbar { display: none; }
-
-    .glass-card {
-      background: rgba(10,14,18,0.3);
-      border: 1px solid rgba(191,210,227,0);
-      border-radius: 24px;
-      backdrop-filter: blur(0px);
-      padding: 2rem;
-      text-align: center;
-      box-shadow: 0 0 12px rgba(191,210,227,0.1);
-    }
-
-    .subtitle {
-      font-size: 1.2rem;
-      margin-bottom: 1rem;
-      color: #7FA7C2;
-    }
-
-    .glow-text {
-      color: #BFD2E3;
-      text-shadow: 0 0 4px rgba(191,210,227,0.5),
-                   0 0 8px rgba(191,210,227,0.4),
-                   0 0 12px rgba(191,210,227,0.2);
-    }
 
     #clicker {
       width: 220px;
@@ -59,7 +32,7 @@
       -webkit-user-drag: none;
       cursor: pointer;
       filter: drop-shadow(0 0 10px rgba(191,210,227,0.35));
-      transition: filter 0.15s ease;
+      transition: transform 0.15s ease;
       touch-action: manipulation;
     }
 
@@ -73,8 +46,10 @@
     }
 
     #counter {
-      margin: .75rem 0 1rem;
+      margin: 1rem 0 2rem;
       font-weight: 700;
+      color: #BFD2E3;
+      text-shadow: 0 0 6px rgba(191,210,227,0.4);
     }
 
     footer {
@@ -95,15 +70,16 @@
   </style>
 </head>
 <body>
-  <div class="glass-card">
-    <div class="subtitle glow-text">Enter The Bootyverse Thicclopedia</div>
-    <img id="clicker" src="assets/IMG_8795.jpeg" alt="Tap Cheeks for Doubloons">
-    <div id="counter" class="glow-text">Doubloons: 0</div>
-  </div>
+  <!-- Tap Image -->
+  <img id="clicker" src="assets/IMG_8795.jpeg" alt="Tap Cheeks for Doubloons">
 
+  <!-- Doubloon Counter -->
+  <div id="counter">Doubloons: 0</div>
+
+  <!-- Footer -->
   <footer>
-    <p class="glow-text">by accessing this site you are assumed to be 21+ years of age.</p>
-    <p class="glow-text">© 2026 Bootyverse Studios. All cheeks reserved 🍑</p>
+    <p>by accessing this site you are assumed to be 21+ years of age.</p>
+    <p>© 2026 Bootyverse Studios. All cheeks reserved 🍑</p>
   </footer>
 
   <script>
