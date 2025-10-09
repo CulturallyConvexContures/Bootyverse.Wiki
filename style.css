@@ -65,8 +65,8 @@ header h1 {
 }
 
 .paper {
-  background: rgba(25, 30, 50, 0.5); /* ✨ 50% opacity glass effect */
-  backdrop-filter: blur(4px);
+  background: rgba(25, 30, 50, 0.2); /* ✨ 50% opacity glass effect */
+  backdrop-filter: blur(1px);
   border: 2px solid #8aa;
   border-radius: 10px;
   padding: 0.8rem;
@@ -83,7 +83,7 @@ header h1 {
 
 .paper:hover {
   transform: scale(1.04);
-  box-shadow: 0 0 20px rgba(180, 220, 255, 0.6);
+  box-shadow: 0 0 20px rgba(180, 220, 255, 0.2);
 }
 
 /* Color accents for each file */
