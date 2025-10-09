@@ -6,7 +6,7 @@
   <title>Bootyverse Thicclopedia</title>
 
   <style>
-    /* Lock to iPhone 12 Pro Max proportions + frost vibe */
+    /* Fullscreen Pluto vibes */
     html, body {
       margin: 0; padding: 0;
       height: 100vh; width: 100vw;
@@ -44,8 +44,7 @@
       cursor: pointer;
       filter: drop-shadow(0 0 10px rgba(191,210,227,0.35));
       transition: filter 0.15s ease;
-      /* allow taps despite global touch-action:none */
-      touch-action: manipulation;
+      touch-action: manipulation; /* allow taps */
     }
     #clicker.shake { animation: shake 120ms ease; }
     @keyframes shake {
@@ -55,14 +54,6 @@
     }
 
     #counter { margin: .75rem 0 1rem; font-weight: 700; }
-    #unlock { display: none; margin-top: 0.75rem; }
-    #unlock a {
-      display: inline-block; padding: 10px 16px; border-radius: 14px;
-      color: #0B0E12; font-weight: 700; text-decoration: none;
-      background: linear-gradient(145deg, #5C7EA7, #7FA7C2);
-      box-shadow: 0 0 12px rgba(191,210,227,0.25);
-    }
-
     footer {
       text-align: center; padding: 1rem;
       background-color: rgba(0,0,41,0.2);
@@ -75,21 +66,13 @@
   </style>
 </head>
 <body>
-  
-  
   <div class="glass-card">
     <div class="subtitle glow-text">Enter The Bootyverse Thicclopedia</div>
 
     <!-- TAP THIS IMAGE TO EARN DOUBLOONS -->
-    <!-- Replace the src with your art: e.g. 'assets/clicker.png' -->
     <img id="clicker" src="assets/IMG_8795.jpeg" alt="Tap Cheeks for Doubloons">
 
     <div id="counter" class="glow-text">Doubloons: 0</div>
-
-    <!-- Appears once you have enough Doubloons -->
-    <div id="hidden">
-      <a href="wikihome.html">Enter the Thicclopedia</a>
-    </div>
 
     <div class="footer-emoji">🧊🌀🍰✨</div>
   </div>
@@ -103,27 +86,35 @@
   <script>
     (function () {
       let doubloons = 0;
-      const PER_CLICK = 7;     // ← tweak per-tap reward
-      const TARGET    = 100;   // ← tweak unlock threshold
+      const PER_CLICK = 7;     // per tap
+      const TARGET    = 100;   // teleport threshold
+      let teleported  = false; // prevent double-fire
 
       const clicker = document.getElementById('clicker');
       const counter = document.getElementById('counter');
-      const unlock  = document.getElementById('unlock');
 
       function addDoubloons() {
         doubloons += PER_CLICK;
         counter.textContent = 'Doubloons: ' + doubloons;
+
         // tap shake
         clicker.classList.add('shake');
         setTimeout(() => clicker.classList.remove('shake'), 140);
-        // unlock link
-        if (doubloons >= TARGET) {
-  unlock.hidden = false;
-}
 
-      // Support both click and touch
+        // auto-teleport
+        if (!teleported && doubloons >= TARGET) {
+          teleported = true;
+          // use href for back-button support; replace() to prevent back
+          window.location.href = 'wikihome.html';
+          // window.location.replace('wikihome.html');
+        }
+      }
+
       clicker.addEventListener('click', addDoubloons);
-      clicker.addEventListener('touchstart', (e) => { e.preventDefault(); addDoubloons(); }, { passive: false });
+      clicker.addEventListener('touchstart', (e) => {
+        e.preventDefault();
+        addDoubloons();
+      }, { passive: false });
     })();
   </script>
 </body>
