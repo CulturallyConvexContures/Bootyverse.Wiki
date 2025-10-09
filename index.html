@@ -75,6 +75,8 @@
   </style>
 </head>
 <body>
+  
+  
   <div class="glass-card">
     <div class="subtitle glow-text">Enter The Bootyverse Thicclopedia</div>
 
@@ -85,7 +87,7 @@
     <div id="counter" class="glow-text">Doubloons: 0</div>
 
     <!-- Appears once you have enough Doubloons -->
-    <div id="unlock">
+    <div id="hidden">
       <a href="wikihome.html">Enter the Thicclopedia</a>
     </div>
 
@@ -115,10 +117,9 @@
         clicker.classList.add('shake');
         setTimeout(() => clicker.classList.remove('shake'), 140);
         // unlock link
-        if (doubloons >= TARGET && unlock.style.display === 'none') {
-          unlock.style.display = 'block';
-        }
-      }
+        if (doubloons >= TARGET) {
+  unlock.hidden = false;
+}
 
       // Support both click and touch
       clicker.addEventListener('click', addDoubloons);
