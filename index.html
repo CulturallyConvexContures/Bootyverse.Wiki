@@ -46,27 +46,34 @@
     }
 
     #counter {
-      margin: 1rem 0 2rem;
-      font-weight: 700;
-      color: ##141619;
-      text-shadow: 0 0 6px rgba(191,210,227,0.8);
-    }
+  margin: 1rem 0 2rem;
+  font-weight: 800;
+  font-size: 1.2rem;
+  color: #8C6BFF; /* Dubluna glow */
+  text-shadow:
+    0 0 3px rgba(0,0,0,0.9),   /* base outline */
+    0 0 8px rgba(0,0,0,0.6),   /* soft glow depth */
+    0 0 12px rgba(140,107,255,0.7); /* faint Dubluna aura */
+}
 
-    footer {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      text-align: center;
-      padding: 0.8rem 1rem;
-      background-color: rgba(0,0,41,0);
-      color: ##141619;
-      font-size: 0.3rem;
-      font-weight: 500;
-      border-top: 1px solid rgba(255,255,255,0.15);
-      text-shadow: 0 0 2px rgba(50, 70, 90, 0.5)
-;
-    }
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  padding: 0.8rem 1rem;
+  background-color: rgba(0,0,41,0.25);
+  color: #8C6BFF; /* Dubluna glow */
+  font-size: 0.65rem;
+  font-weight: 500;
+  backdrop-filter: blur(3px);
+  border-top: 1px solid rgba(255,255,255,0.1);
+  text-shadow:
+    0 0 3px rgba(0,0,0,0.9),
+    0 0 8px rgba(0,0,0,0.6),
+    0 0 12px rgba(140,107,255,0.7);
+}
   </style>
 </head>
 <body>
