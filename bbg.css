@@ -93,6 +93,41 @@ button {
   cursor: pointer;
   transition: 0.2s;
 }
+
+/* --- Mini-game --- */
+#minigame {
+  text-align:center;
+  margin-bottom:1.5rem;
+}
+#mineBtn {
+  width:80px;
+  cursor:pointer;
+  image-rendering:pixelated;
+  transition:transform 0.15s ease;
+  filter:drop-shadow(0 0 8px rgba(255,153,102,0.3));
+}
+#mineBtn.bump { transform:scale(1.1); }
+#xpDisplay {
+  margin-top:0.4rem;
+  font-size:0.7rem;
+  color:#ff9966;
+  text-shadow:0 0 6px rgba(255,153,102,0.6);
+}
+
+/* --- Lock visual --- */
+.image.locked img {
+  filter:grayscale(1) brightness(0.4);
+  pointer-events:none;
+}
+#lockNotice {
+  text-align:center;
+  font-size:0.55rem;
+  color:#ff9966;
+  opacity:0.8;
+  margin-top:0.3rem;
+}
+a.disabled { pointer-events:none; cursor:default; }
+
 button:hover {
   background: rgba(255, 153, 102, 0.1);
 }
