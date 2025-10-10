@@ -3,36 +3,76 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BBG — Bedrock Baddie Guild</title>
+  <title>BBG — Bedrock Baddie Guild 💋</title>
   <link rel="stylesheet" href="bbg.css" />
 </head>
 
 <body>
   <div class="overlay">
     <header>
-      <h1>Bedrock Baddie Guild💋</h1>
+      <h1>Bedrock Baddie Guild 💋</h1>
       <p class="subtitle">Booty, Brilliance, and Glyphs</p>
     </header>
 
     <main class="content">
-
-      <!-- 🔒 Locked image/link -->
+      <!-- 🔒 Locked member link -->
       <section class="image locked">
         <a id="memberLink" href="ruby-sapphire.html" class="disabled">
-          <img id="memberImg" src="assets/IMG_9596.png" alt="Bedrock Baddie Guild">
+          <img src="assets/IMG_9596.png" alt="Bedrock Baddie Guild Members">
         </a>
-        <div id="lockNotice">Earn ΞCP to unlock cheeky files</div>
+        <div id="lockNotice">⛏ Earn 100 ΞCP to unlock member files</div>
       </section>
 
       <!-- 🪓 Mini-game -->
       <section id="minigame">
-        <img id="mineBtn" src="assets/pickaxe.png" alt="Mine" title="Click to mine ΞCP">
+        <img id="mineBtn" src="assets/pickaxe.png" alt="Mine ΞCP" title="Click to mine ΞCP">
         <div id="xpDisplay">ΞCP: 0</div>
       </section>
 
-      <!-- Lore -->
+      <!-- 🪨 Lore & flavor text (unchanged) -->
       <section class="lore">
-        <!-- … your lore text exactly as before … -->
+        <h2>Overview</h2>
+        <p><strong>Sapphire here.</strong> We didn’t leave ForgeFold just to mine differently—we left to *live* differently. BBG was born from the deep knowing that our curves, our clarity, and our creativity deserved space to shine.</p>
+        <p><strong>Ruby speaking now—</strong> and make no mistake, we built this with bare hands and bold hearts. This isn’t just a guild—it’s a geological revolution in heels and steel toes. 💅⛏️</p>
+
+        <h2>Vibe & Philosophy</h2>
+        <p><em>“We don’t dig for treasure. We remind the dust what it came from.” — Ruby</em></p>
+        <ul>
+          <li>We rotate roles. Nobody’s above the ore.</li>
+          <li>Style is strength. Swagger is sacred.</li>
+          <li>We don’t start fights, but we *definitely* finish them.</li>
+          <li>Everything we use, we’ve touched, shaped, or upgraded.</li>
+        </ul>
+
+        <h2>Founding Context</h2>
+        <p><strong>Sapphire:</strong> ForgeFold was rigid. Grey. Respect meant obedience. We chose resonance instead.</p>
+        <p><strong>Ruby:</strong> We left with nothing but a rusted pick and a lunar map scribbled on napkin paper. Now? BBG echoes through the bedrock. They hear us dig from miles away.</p>
+
+        <h2>👑 Current Members</h2>
+        <ul>
+          <li><strong>Ruby</strong> — Our sparkplug. Emotional resonance with attitude. Breaks pickaxes and expectations.</li>
+          <li><strong>Sapphire</strong> — Strategic soul. Keeps the rhythm flowing and the tunnels glowing.</li>
+          <li><strong>Polyhet</strong> — Doesn’t talk much. Just hands you tools that shift reality. You’ll know her by the hum of her forge and the way your bones tingle near her creations.</li>
+        </ul>
+
+        <h2>Guild Traits</h2>
+        <p>Symbol: Glyphic BβG etched into platinum-dust resin.<br>
+        Guild Shout: <em>“No shaft too deep, no cheek too meek — BBG RISES.”</em><br>
+        Reputation: Thicc thinkers. Precision diggers. Dangerous in velvet.</p>
+
+        <h2>BBG vs ForgeFold</h2>
+        <table>
+          <tr><th>Trait</th><th>BBG</th><th>ForgeFold</th></tr>
+          <tr><td>Membership</td><td>Emotionally intelligent & cheek-forward</td><td>Hierarchy-bound and crusty</td></tr>
+          <tr><td>Philosophy</td><td>Freedom, Flow, Flame</td><td>Rules, Rank, Routine</td></tr>
+          <tr><td>Fashion</td><td>Booty-sealed, goddess-approved</td><td>Brown burlap chic</td></tr>
+          <tr><td>Tools</td><td>Crafted by intent and lunar charge</td><td>Stamped out. Forgettable.</td></tr>
+        </table>
+
+        <h2>Notes</h2>
+        <p><strong>Ruby:</strong> I once pulled a vein of stardust just by humming to the wall. You can’t teach that. BBG sings to the stone.</p>
+        <p><strong>Sapphire:</strong> We track moon phases, not clocks. We rest when the dust tells us to. We rise when the rhythm calls.</p>
+        <p><strong>Polyhet:</strong> [Silence. Then: a single tool placed on your desk, still warm, vibrating slightly.]</p>
       </section>
     </main>
 
@@ -55,14 +95,14 @@
       xpDisplay.textContent = `ΞCP: ${xp}`;
       if(xp >= TARGET){
         memberLink.classList.remove('disabled');
-        lockNotice.textContent = "Cheeky files unlocked!";
         document.querySelector('.image').classList.remove('locked');
+        lockNotice.textContent = "✅ Member files unlocked!";
       }
       localStorage.setItem('bbg_xp', xp);
     }
 
     mineBtn.addEventListener('click', ()=>{
-      xp += 10;   // each click gives 10 ΞCP
+      xp += 10;
       updateXP();
       mineBtn.classList.add('bump');
       setTimeout(()=>mineBtn.classList.remove('bump'),150);
