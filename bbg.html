@@ -20,7 +20,7 @@
         <a id="memberLink" href="ruby-sapphire.html" class="disabled">
           <img src="assets/IMG_9596.png" alt="Bedrock Baddie Guild Members">
         </a>
-        <div id="lockNotice">⛏ Earn 100 ΞCP to unlock member files</div>
+        <div id="lockNotice">⛏ Earn 100 ΞCP to unlock Cheeky files</div>
       </section>
 
       <!-- 🪓 Mini-game -->
@@ -28,7 +28,11 @@
         <img id="mineBtn" src="assets/rock1.png" alt="Mine ΞCP" title="🍑">
         <div id="xpDisplay">ΞCP: 0</div>
       </section>
-
+      
+<button id="resetGate">Too Thicc to Quit</button>
+<p id="resetNote" style="font-size:0.55rem;opacity:0.8;margin-top:0.3rem;">
+  Forget what you’ve learned and start anew.
+</p>
       <!-- 🪨 Lore & flavor text (unchanged) -->
       <section class="lore">
         <h2>Overview</h2>
@@ -110,6 +114,21 @@
 
     updateXP();
   })();
+  // reset gate button
+const resetBtn = document.getElementById('resetGate');
+const resetNote = document.getElementById('resetNote');
+
+resetBtn.addEventListener('click', () => {
+  if (confirm('Too Cheeked up? Your stored ΞCP will be lost. :(')) {
+    localStorage.removeItem('bbg_xp');       // clear saved XP
+    xp = 0;
+    updateXP();                              // update display
+    memberLink.classList.add('disabled');    // lock link again
+    document.querySelector('.image').classList.add('locked');
+    lockNotice.textContent = '⛏ Earn 100 ΞCP to unlock member files';
+    resetNote.textContent = '✨ The gate hums, memory forged anew.';
+  }
+});
   </script>
 </body>
 </html>
