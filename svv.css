@@ -10,47 +10,40 @@ html, body {
   overflow-y: auto;
   scroll-behavior: smooth;
 }
-/* Seed demo link section */
-.seedlink {
-  text-align: center;
-  margin: 2rem 0;
-}
-
-.seedlink h2 {
-  color: #88ffbb;
-  font-size: 0.8rem;
-  margin-bottom: 0.5rem;
-}
-
-.seedlink p {
-  font-size: 0.6rem;
-  color: #b4ffb4;
-  margin-bottom: 1rem;
-}
-
-/* Image button (the seed) */
+/* Default seed button setup */
 .seed-portal {
-  width: 120px; /* control how big it appears */
+  width: 120px;
   height: auto;
   cursor: pointer;
   transition: transform 0.25s ease, filter 0.25s ease;
-  border: 2px solid rgba(136, 255, 187, 0.4);
   border-radius: 12px;
   box-shadow: 0 0 15px rgba(136, 255, 187, 0.25);
-}
-@keyframes pulse {
-  0% { transform: scale(1); filter: drop-shadow(0 0 8px #88ffbb50); }
-  50% { transform: scale(1.05); filter: drop-shadow(0 0 12px #88ffbb90); }
-  100% { transform: scale(1); filter: drop-shadow(0 0 8px #88ffbb50); }
-}
-
-.seed-portal {
   animation: pulse 2.5s infinite ease-in-out;
 }
-/* Hover effects */
+
+/* Hover */
 .seed-portal:hover {
   transform: scale(1.1);
-  filter: drop-shadow(0 0 10px #88ffbb);
+  filter: drop-shadow(0 0 15px #88ffbb);
+}
+
+/* Gentle idle breathing */
+@keyframes pulse {
+  0% { transform: scale(1); filter: drop-shadow(0 0 8px #88ffbb40); }
+  50% { transform: scale(1.05); filter: drop-shadow(0 0 12px #88ffbb90); }
+  100% { transform: scale(1); filter: drop-shadow(0 0 8px #88ffbb40); }
+}
+
+/* Charging-up click animation */
+@keyframes chargeUp {
+  0% { transform: scale(1); filter: brightness(1) drop-shadow(0 0 8px #88ffbb40); }
+  50% { transform: scale(1.2); filter: brightness(2) drop-shadow(0 0 20px #88ffbbff); }
+  100% { transform: scale(0.95); filter: brightness(0.8) drop-shadow(0 0 5px #88ffbb30); }
+}
+
+/* When clicked */
+.seed-portal.charging {
+  animation: chargeUp 0.9s forwards ease-out;
 }
 /* Overlay for dreamy glow */
 .overlay {
