@@ -10,7 +10,48 @@ html, body {
   overflow-y: auto;
   scroll-behavior: smooth;
 }
+/* Seed demo link section */
+.seedlink {
+  text-align: center;
+  margin: 2rem 0;
+}
 
+.seedlink h2 {
+  color: #88ffbb;
+  font-size: 0.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.seedlink p {
+  font-size: 0.6rem;
+  color: #b4ffb4;
+  margin-bottom: 1rem;
+}
+
+/* Image button (the seed) */
+.seed-portal {
+  width: 120px; /* control how big it appears */
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.25s ease, filter 0.25s ease;
+  border: 2px solid rgba(136, 255, 187, 0.4);
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(136, 255, 187, 0.25);
+}
+@keyframes pulse {
+  0% { transform: scale(1); filter: drop-shadow(0 0 8px #88ffbb50); }
+  50% { transform: scale(1.05); filter: drop-shadow(0 0 12px #88ffbb90); }
+  100% { transform: scale(1); filter: drop-shadow(0 0 8px #88ffbb50); }
+}
+
+.seed-portal {
+  animation: pulse 2.5s infinite ease-in-out;
+}
+/* Hover effects */
+.seed-portal:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 10px #88ffbb);
+}
 /* Overlay for dreamy glow */
 .overlay {
   background: rgba(10, 25, 15, 0.75);
