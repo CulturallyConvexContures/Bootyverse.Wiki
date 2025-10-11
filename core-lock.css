@@ -1,0 +1,51 @@
+/* ⚙️ Bootyverse Page Lock — v1.0
+   Makes each page feel like a fullscreen app window.
+   Import once at the top of your HTML and forget about it. */
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  overscroll-behavior: none;
+  touch-action: none;
+  user-select: none;
+  -webkit-user-drag: none;
+  background-color: #0B0E12;
+  font-family: 'Press Start 2P', monospace;
+  color: #F2F2F2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* 🔮 Optional: universal glow aesthetic */
+body.lock-glow {
+  background-image: radial-gradient(
+    circle at center,
+    rgba(140,107,255,0.1) 0%,
+    rgba(11,14,18,1) 100%
+  );
+}
+
+/* 🧠 Helper class: allows scroll when needed (opt-in) */
+.scrollable {
+  overflow-y: auto;
+  touch-action: pan-y;
+  overscroll-behavior: contain;
+}
+
+/* 💫 Utility: smooth fades for transitions */
+.fade-in {
+  animation: fadeIn 0.4s ease forwards;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.98); }
+  to   { opacity: 1; transform: scale(1); }
+}
